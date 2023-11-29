@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> 1. Create Database and Create Collection.</h3>
+    <ul>
+        <li>use Human_Resource</li>
+        <li>db.employee.insertOne({"name":"Ayush Manware", "Course":"MERN Stack", "age": 22})</li>
+    </ul>
+
+    <h3> 2. List all the document</h3>
+    <ul>
+        <li>db.employee.find({})</li>
+    </ul>
+
+    <h3> 3. Querry for employees with salary greater than 30,000</h3>
+    <ul>
+        <li>db.employee.find({"salary" : {$gt : 30000}})</li>
+    </ul>
+
+    <h3> 4.  Querry for employees with experience more than 2 years</h3>
+    <ul>
+        <li>db.employee.find({"overallExp" : {$gt : 2}})</li>
+    </ul>
+
+    <h3> 5. Querry for employees with graduation after 2015 and experience more than 1 year.</h3>
+    <ul>
+        <li>db.employee.find({"yearGrad" : {$gt : 2015}, "overallExp": {$gt : 1}})</li>
+    </ul>
+
+    <h3> 6. Update the salary </h3>
+    <ul>
+        <li>db.employee.updateOne({"salary" : {$gt : 70000}}, {$set : {"salary":65000}})</li>
+    </ul>
+
+    <h3> 7. Delete employes from Y company.</h3>
+    <ul>
+    <li>db.employee.deleteMany({"lastCompany": "y"})</li>
+    </ul>
+</body>
+</html>
